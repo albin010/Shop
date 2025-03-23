@@ -5,7 +5,7 @@ const Food = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4500/items") // Adjust the URL as per your backend
+    fetch("https://shop-7m90.onrender.com/items") // Adjust the URL as per your backend
       .then((res) => res.json())
       .then((data) => {
         const foodItems = data.filter((item) => item.menu === "FOOD"); // Filter Food items

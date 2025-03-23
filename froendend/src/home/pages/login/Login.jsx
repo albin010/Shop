@@ -18,7 +18,7 @@ const AdminLogin = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:4500/AdminLogin", {
+      const response = await axios.post("https://shop-7m90.onrender.com/AdminLogin", {
         adminEmail,
         adminPassword,
       });

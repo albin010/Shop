@@ -5,7 +5,7 @@ const Main = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4500/items") // Adjust the URL as per your backend
+    fetch("https://shop-7m90.onrender.com/items") // Adjust the URL as per your backend
       .then((res) => res.json())
       .then((data) => setItems(data))
       .catch((err) => console.error("Error fetching items:", err));

@@ -21,7 +21,7 @@ const Menu = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:4500/typeDesignations"); 
+      const response = await axios.get("https://shop-7m90.onrender.com/typeDesignations"); 
   
       console.log("API Status:", response.status);
       console.log("API Response Data:", response.data);
@@ -53,7 +53,7 @@ const Menu = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:4500/typeDesignation", formData);
+      await axios.post("https://shop-7m90.onrender.com/typeDesignation", formData);
       fetchData();
       setFormData({ type: "", designation: "" });
     } catch (error) {
@@ -64,7 +64,7 @@ const Menu = () => {
   // Handle Delete
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:4500/typeDesignation/${id}`);
+      await axios.delete(`https://shop-7m90.onrender.com/typeDesignation/${id}`);
       fetchData();
     } catch (error) {
       console.error("Error deleting entry:", error);
@@ -86,7 +86,7 @@ const Menu = () => {
   const handleEditSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:4500/typeDesignation/${editData._id}`, editData);
+      await axios.put(`https://shop-7m90.onrender.com/typeDesignation/${editData._id}`, editData);
       setOpen(false);
       fetchData();
     } catch (error) {

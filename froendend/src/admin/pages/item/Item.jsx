@@ -44,7 +44,7 @@ const Item = () => {
   // Fetch all items
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:4500/Items");
+      const response = await axios.get("https://shop-7m90.onrender.com/Items");
       setItems(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -54,7 +54,7 @@ const Item = () => {
   // Fetch menu types from the backend
   const fetchTypeDesignations = async () => {
     try {
-      const response = await axios.get("http://localhost:4500/typeDesignation");
+      const response = await axios.get("https://shop-7m90.onrender.com/typeDesignation");
       setTypeOptions(response.data);
     } catch (error) {
       console.error("Error fetching menu types:", error);
@@ -70,7 +70,7 @@ const Item = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:4500/Items", formData);
+      await axios.post("https://shop-7m90.onrender.com/Items", formData);
       fetchData();
       setFormData({ menu: "", itemName: "", designation: "", price: "" });
     } catch (error) {
@@ -81,7 +81,7 @@ const Item = () => {
   // Handle delete
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:4500/Items/${id}`);
+      await axios.delete(`https://shop-7m90.onrender.com/Items/${id}`);
       fetchData();
     } catch (error) {
       console.error("Error deleting item:", error);
@@ -103,7 +103,7 @@ const Item = () => {
   const handleEditSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:4500/Items/${editData._id}`, editData);
+      await axios.put(`https://shop-7m90.onrender.com/Items/${editData._id}`, editData);
       setOpen(false);
       fetchData();
     } catch (error) {

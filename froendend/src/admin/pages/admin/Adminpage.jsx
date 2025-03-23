@@ -30,7 +30,7 @@ const AdminPage = () => {
 
   const fetchAdmins = async () => {
     try {
-      const response = await axios.get("http://localhost:4500/Admins");
+      const response = await axios.get("https://shop-7m90.onrender.com/Admins");
       setAdmins(response.data);
     } catch (error) {
       console.error("Error fetching admins:", error);
@@ -46,7 +46,7 @@ const AdminPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:4500/Admin", formData);
+      await axios.post("https://shop-7m90.onrender.com/Admin", formData);
       fetchAdmins();
       setFormData({ adminName: "", adminEmail: "", adminPassword: "" });
     } catch (error) {
@@ -57,7 +57,7 @@ const AdminPage = () => {
   // Delete Admin
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:4500/Admin/${id}`);
+      await axios.delete(`https://shop-7m90.onrender.com/Admin/${id}`);
       fetchAdmins();
     } catch (error) {
       console.error("Error deleting admin:", error);
@@ -79,7 +79,7 @@ const AdminPage = () => {
   const handleEditSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:4500/Admin/${editData._id}`, editData);
+      await axios.put(`https://shop-7m90.onrender.com/Admin/${editData._id}`, editData);
       fetchAdmins();
       setOpen(false);
     } catch (error) {
