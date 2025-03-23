@@ -13,6 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("./public"));
 const multer = require('multer');
 app.use("/uploads", express.static("uploads"));
+const users = await User.find().lean();
 
 
 app.listen(port, async () => { // 👈 Changed to async function
