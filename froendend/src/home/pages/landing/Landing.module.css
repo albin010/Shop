@@ -1,0 +1,83 @@
+body{
+  background: url('/image/background.jpg')
+}
+.container {
+    position: relative;
+    height: 100vh;
+    background: url('/image/landpage.jpg') no-repeat center center/cover;
+  }
+  
+  /* Dark Overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark transparency */
+  }
+  
+  /* Content */
+  .content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  /* Menu Title */
+  .menuTitle {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  /* Description */
+  .menuDescription {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Group */
+  .buttonGroup {
+    display: flex;
+    gap: 15px;
+  }
+  
+  /* Buttons */
+  .menuButton {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .menuButton:hover {
+    background: white;
+    color: black;
+  }
+  
+  /* Drinks Button */
+  /* .drinksButton {
+    background: white;
+    border: none;
+  } */
+  
+  .drinksButton:hover {
+    background: white;
+    color: black;
+  }
+  

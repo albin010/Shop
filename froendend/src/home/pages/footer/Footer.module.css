@@ -1,0 +1,115 @@
+/* Footer Styles */
+.footer {
+  background-color: black;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* Footer Container */
+.footerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Footer Box */
+.footerBox {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  padding: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+/* Footer Heading */
+.footerHeading {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00aaff; /* Blue color for headings */
+  margin-bottom: 10px;
+}
+
+/* Paragraph Styles */
+.footerBox p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Logo */
+.logo {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+/* Brand Name */
+.brandName {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.highlight {
+  color: gray; /* Color for "SOFT" */
+}
+
+/* Social Icons */
+.socialIcons span {
+  margin: 0 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Bottom Bar */
+.bottomBar {
+  background-color: #222;
+  padding: 10px 0;
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 10px auto 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Footer Links */
+.links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 12px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footerContainer {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footerBox {
+      width: 90%;
+      margin: 10px auto;
+  }
+
+  .bottomBar {
+      flex-direction: column;
+      text-align: center;
+      padding: 15px;
+  }
+
+  .links {
+      margin-top: 10px;
+  }
+}
