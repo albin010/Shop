@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const port = 4500;
+const port =process.env.PORT || 4500;
 
 
 //use express static folder
